@@ -1,9 +1,8 @@
 package wiro.apps
 
-import wiro.apps.models.User
+import wiro.apps.Models.User
 
 import scala.concurrent.Future
-
 import scala.concurrent.ExecutionContext.Implicits.global
 /**
   * Created by sam on 16/06/17.

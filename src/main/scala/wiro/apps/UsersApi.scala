@@ -1,7 +1,7 @@
 package wiro.apps
 
 import wiro.annotation.{command, path, query}
-import wiro.apps.models.User
+import wiro.apps.Models.User
 
 import scala.concurrent.Future
 

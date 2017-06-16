@@ -12,12 +12,7 @@ import FailSupport._
 import akka.http.scaladsl.model.{ContentType, HttpEntity, HttpResponse, StatusCodes}
 import akka.http.scaladsl.model.MediaTypes
 import io.circe.generic.auto._
-import wiro.apps.models.User
 
-// Models definition
-object models {
-  case class User(name: String)
-}
 
   import wiro.annotation._
 
@@ -46,7 +41,7 @@ object errors {
 
 object UsersServer extends App with RouterDerivationModule {
 
-  import models._
+  import Models._
   import errors._
 
   val usersRouter = deriveRouter[UsersApi](new UsersApiImpl)
