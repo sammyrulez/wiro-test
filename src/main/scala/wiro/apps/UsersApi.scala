@@ -8,15 +8,23 @@ import scala.concurrent.Future
 /**
   * Created by sam on 16/06/17.
   */
-@path("users")
+
+object Models {
+
+  case class User(name: String)
+
+}
+
+
+@path("campings")
 trait UsersApi {
 
-  @query(name = Some("getUser"))
+  @query
   def getUser(
                id: Int
              ): Future[Either[UserNotFoundError, User]]
 
-  @command(name = Some("insertUser"))
+  @command
   def insertUser(
                   id: Int,
                   name: String
