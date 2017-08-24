@@ -11,6 +11,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 object UsersDb {
   val users = collection.mutable.Map.empty[Int, User]
+  users.put(0,new User("Pluto"))
 }
 
 class UsersApiImpl() extends UsersApi {
