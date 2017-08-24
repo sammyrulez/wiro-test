@@ -4,17 +4,15 @@ import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
-import wiro.models.Config
 import wiro.server.akkaHttp.{FailSupport, HttpRPCServer, RouterDerivationModule}
 import wiro.server.akkaHttp.ToHttpResponse
-import wiro.reflect._
 import FailSupport._
 import akka.http.scaladsl.model.{ContentType, HttpEntity, HttpResponse, StatusCodes}
 import akka.http.scaladsl.model.MediaTypes
 import io.circe.generic.auto._
+import wiro.Config
 
-
-  import wiro.annotation._
+import wiro.server.akkaHttp._
 
   // Error messages
   case class Error(msg: String)

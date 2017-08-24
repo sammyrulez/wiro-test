@@ -16,7 +16,7 @@ object Models {
 }
 
 
-@path("campings")
+@path("users")
 trait UsersApi {
 
   @query
